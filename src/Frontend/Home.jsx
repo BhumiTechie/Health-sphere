@@ -34,7 +34,7 @@ function Home() {
        
        <img src="src/Frontend/images/doctor img.jpg"alt="" className='doc'/>
       
-       </div>
+       </div> 
        
 
       <section className="features-section">
