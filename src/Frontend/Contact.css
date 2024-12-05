@@ -1,0 +1,94 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f8fafc, #e1e8ed);
+  color: #333;
+}
+
+/* Contact Page Background */
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  perspective: 1000px; /* Key for 3D effect */
+}
+
+/* Contact Form Container */
+.contact-container {
+  width: 400px;
+  transform: rotateY(-10deg) rotateX(5deg); /* 3D rotation */
+  background: #ffffff;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 20px 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-container:hover {
+  transform: rotateY(0deg) rotateX(0deg); /* Reset rotation on hover */
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+/* Form Title */
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Form Fields */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #6e8efb;
+  outline: none;
+  box-shadow: 0 0 5px rgba(110, 142, 251, 0.5);
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(110, 142, 251, 0.4);
+}
+
+/* Error Message */
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}

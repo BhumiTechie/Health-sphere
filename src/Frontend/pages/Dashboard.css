@@ -1,0 +1,14 @@
+.page-container {
+  display: flex;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f4f5fa;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #031529;
+}

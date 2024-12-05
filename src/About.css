@@ -1,0 +1,99 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .about {
+    background: linear-gradient(135deg, #74b9ff, #81ecec);
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 768px) {
+    .about-container {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+  
+  /* Text Content Styling */
+  .text-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .text-content h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: #f7f7f7;
+    font-weight: 700;
+  }
+  
+  .text-content h1 span {
+    color: #ffeaa7;
+  }
+  
+  .text-content p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #dfe6e9;
+  }
+  
+  .learn-more-btn {
+    background: #ffeaa7;
+    color: #2d3436;
+    font-size: 1em;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .learn-more-btn:hover {
+    background: #fab1a0;
+  }
+  
+  /* Image Content Styling */
+  .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .about-image {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .about-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .text-content h1 {
+      font-size: 2.2em;
+    }
+  
+    .text-content p {
+      font-size: 1em;
+    }
+  }
+  
