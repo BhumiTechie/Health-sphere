@@ -1,9 +1,18 @@
 const express = require('express');
-const upload = require('./middleware/uploadMiddleware');
+const { 
+    getAllRecords, 
+    getRecordById, 
+    createRecord, 
+    updateRecord, 
+    deleteRecord 
+} = require('../Controllers/recordController');
 const router = express.Router();
 
-router.post('/upload', upload.single('file'), (req, res) => {
-    res.status(200).json({ message: 'File uploaded successfully', file: req.file });
-});
+// Routes for Records
+router.get('/', getAllRecords);           // Get all records
+router.get('/:id', getRecordById);        // Get record by ID
+router.post('/', createRecord);           // Add a new record
+router.put('/:id', updateRecord);         // Update record details
+router.delete('/:id', deleteRecord);      // Delete a record
 
 module.exports = router;
