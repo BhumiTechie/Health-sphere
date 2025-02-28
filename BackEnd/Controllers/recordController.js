@@ -6,8 +6,8 @@ const Doctor = require('../Controllers/doctorController');
 exports.getAllRecords = async (req, res) => {
     try {
         const records = await Record.find()
-            .populate('patientId', 'username email') // Populate patient details
-            .populate('doctorId', 'name specialty'); // Populate doctor details
+            .populate('patientId', 'username email') 
+            .populate('doctorId', 'name specialty'); 
 
         res.status(200).json({ success: true, data: records });
     } catch (error) {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
-import logo from './images/HealthSphere.jpg'; // Import your logo here
+import logo from './images/HealthSphere.jpg'; 
 
 function Home() {
   return (
@@ -32,7 +32,7 @@ function Home() {
       </section>
       <div className="hero-illustration">
        
-       <img src="src/Frontend/images/doctor img.jpg"alt="" className='doc'/>
+       <img src="src/Frontend/images/doctor img (1).jpg"alt="" className='doc'/>
       
        </div> 
        
@@ -53,7 +53,7 @@ function Home() {
       </section>
 
       <footer className="footer">
-        <p>© 2024 HealthCare+. All Rights Reserved.</p>
+        <p>HEALTH SPHERE PRESENTED BY BHUMIKA RANI GUPTA, MAHAK SEN, KUSHAGRA DUBEY</p>
       </footer>
     </div>
   );

@@ -21,7 +21,6 @@ function App() {
         {/* Services Page with Sidebar */}
         <Route path="/services" element={<Services />} />
         
-        
         {/* About Page */}
         <Route path="/about" element={<About />} />
         

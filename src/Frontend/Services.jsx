@@ -27,7 +27,7 @@ const Services = () => {
               </div>
               <div className="overview-card">
                 <h4>Total Billing</h4>
-                <p>$2,500</p>
+                <p>2,500 Rs</p>
               </div>
             </div>
             <div className="dashboard-section">
@@ -35,7 +35,7 @@ const Services = () => {
               <ul>
                 <li>Checked in with Dr. Smith (Cardiologist)</li>
                 <li>Prescription updated for blood pressure.</li>
-                <li>Payment of $250 for consultation.</li>
+                <li>Payment of 250 Rs for consultation.</li>
               </ul>
               <h2>Health Statistics</h2>
               <div className="placeholder-chart">[Chart Placeholder]</div>
@@ -68,7 +68,7 @@ const Services = () => {
                 </tr>
                 <tr>
                   <td>2024-12-15</td>
-                  <td>Dr. John Doe</td>
+                  <td>Dr. John Josi</td>
                   <td>Orthopedic</td>
                   <td>Pending</td>
                   <td>
@@ -100,7 +100,7 @@ const Services = () => {
       case "billing":
         return (
           <div className="billing-content">
-            <h1>Billing</h1>
+            <h1>Payment Status</h1>
             <table className="appointments-table">
               <thead>
                 <tr>
@@ -114,13 +114,13 @@ const Services = () => {
                 <tr>
                   <td>#1001</td>
                   <td>2024-12-01</td>
-                  <td>$250</td>
+                  <td>250 Rs</td>
                   <td>Paid</td>
                 </tr>
                 <tr>
                   <td>#1002</td>
                   <td>2024-12-03</td>
-                  <td>$500</td>
+                  <td>500 Rs</td>
                   <td>Pending</td>
                 </tr>
               </tbody>
@@ -159,7 +159,7 @@ const Services = () => {
             className={activePage === "billing" ? "active" : ""}
             onClick={() => setActivePage("billing")}
           >
-            <FaFileInvoice className="menu-icon" /> Billing
+            <FaFileInvoice className="menu-icon" /> Payment Status 
           </li>
         </ul>
       </aside>

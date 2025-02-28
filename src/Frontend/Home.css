@@ -91,6 +91,7 @@ body {
 
 .hero-content {
   color: white;
+  margin-bottom: 170px;
   z-index: 2;
   animation: slideInLeft 1.5s ease-out;
 }
@@ -104,13 +105,8 @@ body {
 .hero-text {
   font-size: 1.5rem;
   margin-bottom: 30px;
-}
+}  
 
-/* .doctor img{
-  
-  margin-top: 800px;
-  margin-right: 250px;
-} */
 
 .cta-button {
   background-color: #fff;
@@ -130,9 +126,8 @@ body {
   position: absolute;
   right: 0;
   bottom: 0;
-  background: url('healthcare_illustration.svg') no-repeat center center;
   background-size: contain;
-  width: 50%;
+  width: 57%;
   height: 100%;
   animation: fadeIn 2s ease-in-out;
 }
@@ -150,20 +145,37 @@ body {
 .features-section {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 35px;
   padding: 50px 20px;
-  min-height: 50px;
+  min-height: 300px; /* Ensures enough height for proper placement */
+  background-color: black; /* Keeps the black section visible */
+  position: relative;
 }
 
+/* Feature Card */
 .feature-card {
   background: white;
   border-radius: 15px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  padding:25px;
-  width: 280px;
+  padding: 26px;
+  width: 310px;
   transition: transform 0.3s ease;
-  margin-top: 100px;
+  height: 180px;
 }
+
+/* Fix Cards within the Black Section */
+.fixed-container {
+  position: absolute;
+  top: 50%;  /* Moves it down */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+
 
 .feature-card:hover {
   transform: translateY(-10px);
