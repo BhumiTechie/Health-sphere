@@ -1,14 +1,122 @@
-.page-container {
+/* Overall Dashboard */
+.modern-patient-dashboard {
   display: flex;
+  gap: 30px;
+  padding: 30px;
+  background: #f4f7fa;
+  font-family: 'Segoe UI', sans-serif;
+  flex-wrap: wrap;
 }
 
-.content {
+/* Profile Panel */
+.left-profile-panel {
   flex: 1;
-  padding: 20px;
-  background-color: #f4f5fa;
+  min-width: 250px;
 }
 
-h1 {
-  font-size: 2rem;
-  color: #031529;
+.profile-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.avatar {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  border: 2px solid #0d6efd;
+}
+
+.profile-card p span {
+  color: #333;
+  font-weight: 500;
+}
+
+/* Center Widgets */
+.center-widgets {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.widget-card {
+  background: #fff;
+  color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.widget-card:hover {
+  transform: scale(1.05);
+}
+
+.widget-card h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.gradient-blue {
+  background: linear-gradient(135deg, #4e91f9, #007bff);
+}
+
+.gradient-green {
+  background: linear-gradient(135deg, #34d399, #10b981);
+}
+
+.gradient-purple {
+  background: linear-gradient(135deg, #a78bfa, #7c3aed);
+}
+
+.gradient-orange {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+}
+
+/* Right Section */
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 260px;
+}
+
+.appointment-card {
+  background: #fff;
+  border-left: 6px solid #0d6efd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.appointment-card:hover {
+  transform: translateY(-5px);
+}
+
+.btn {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #084ec1;
 }

@@ -82,18 +82,26 @@ body {
   flex-direction: column;
   padding: 0 40px;
   height: 100%;
+  color: #000000;;
 }
 
 .container input {
   background-color: #eee;
   border: none;
   margin: 8px 0;
-  padding: 12px 15px; /* Slightly increased padding for better UX */
-  font-size: 14px; /* Increased font size for better readability */
+  padding: 12px 15px;
+  font-size: 14px;
   border-radius: 8px;
   width: 100%;
   outline: none;
+  color: black; 
 }
+
+.container input::placeholder {
+  color: black;
+  opacity: 1;
+}
+
 
 .form-container {
   position: absolute;
@@ -118,6 +126,7 @@ body {
   width: 50%;
   opacity: 0;
   z-index: 1;
+  
 }
 
 .container.active .sign-up {
@@ -125,6 +134,7 @@ body {
   opacity: 1;
   z-index: 5;
   animation: move 0.6s;
+  /* color: #000000; */
 }
 
 @keyframes move {
@@ -143,7 +153,8 @@ body {
 }
 
 .social-icons a {
-  border: 1px solid #ccc;
+  color: black;
+  border: 1px solid #000000;
   border-radius: 50%; /* Changed from 20% to 50% for a rounder look */
   display: inline-flex;
   justify-content: center;
@@ -156,7 +167,7 @@ body {
 
 .social-icons a:hover {
   background-color: #512da8;
-  color: #fff; /* Added hover effect for social icons */
+  color: #000000; /* Added hover effect for social icons */
 }
 
 .toggle-container {
@@ -165,7 +176,7 @@ body {
   width: 100%;
   overflow: hidden; /* Hide overflowing content */
   position: relative;
-  background-color: #f0f0f0; /* Background color for the container */
+  background-color: #000000; /* Background color for the container */
 }
 
 .toggle {
@@ -209,7 +220,7 @@ body {
 
 .toggle-right {
   background-color: #2196F3; /* Blue background for right panel */
-  color: white; /* White text color */
+
 }
 
 h1 {
@@ -236,3 +247,5 @@ button:hover {
   background-color: #000000;
    /* Darker shade on hover */
 }
+
+

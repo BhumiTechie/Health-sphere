@@ -10,7 +10,7 @@ const Appointments = () => {
           <tr>
             <th>Specialist</th>
             <th>Date</th>
-            <th>Time</th>
+            <th>Time</th>  
             <th>Status</th>
           </tr>
         </thead>

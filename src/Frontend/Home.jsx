@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 import logo from './images/HealthSphere.jpg'; 
 
+
 function Home() {
   return (
     <div className="home">
@@ -27,7 +28,7 @@ function Home() {
           <h1 className="hero-title">Your Health, <br/> Our Priority</h1>
           <p className="hero-text">Explore world-class healthcare services at your fingertips.</p>
           <Link to="/services" className="cta-button">Get Started</Link>
-        </div>
+        </div> 
      
       </section>
       <div className="hero-illustration">
@@ -55,6 +56,7 @@ function Home() {
       <footer className="footer">
         <p>HEALTH SPHERE PRESENTED BY BHUMIKA RANI GUPTA, MAHAK SEN, KUSHAGRA DUBEY</p>
       </footer>
+      
     </div>
   );
 }

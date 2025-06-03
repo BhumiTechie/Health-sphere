@@ -22,6 +22,7 @@ app.use('/appointments', appointmentRoutes);
 app.use('/records', recordRoutes); // Removed duplicate
 app.use('/doctors', doctorRoutes);
 
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on PORT ${PORT}`);

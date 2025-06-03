@@ -5,28 +5,27 @@ import Home from './Frontend/Home';
 import Services from './Frontend/Services';
 import About from './About';
 import Contact from './Frontend/contact';
+import Dashboard from './Frontend/pages/Dashboard';
+
+
 
 
 function App() {
   return (
     <Router>
-      <Routes>
-        {/* Home Page Route */}
-        <Route path="/" element={<Home />} />
-
-        {/* Sign Up / Sign In Route */}
-        <Route path="/signin" element={<SignUpSignIn />} />
-        <Route path="/signup" element={<SignUpSignIn />} />
-
-        {/* Services Page with Sidebar */}
-        <Route path="/services" element={<Services />} />
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signin" element={<SignUpSignIn />} />
+          <Route path="/signup" element={<SignUpSignIn />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+       
         
-        {/* About Page */}
-        <Route path="/about" element={<About />} />
-        
-        {/* Contact Page */}
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      </div>
     </Router>
   );
 }

@@ -1,278 +1,205 @@
-/* General Styling */
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f6f9;
-  display: flex; /* Flexbox for side-by-side layout */
-  height: 100vh; /* Ensure the page takes full height */
+/* Root Container */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #e6f7ff);
+  overflow: hidden;
 }
 
 /* Sidebar */
 .sidebar {
-  width: 250px; /* Fixed width for the sidebar */
-  background-color: #0b2545;
+  width: 240px;
+  background: linear-gradient(160deg, #4facfe, #00f2fe);
   color: white;
   padding: 20px;
-  border-radius: 1px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  position: fixed; /* Sidebar stays fixed on the left */
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100; /* Ensures sidebar stays on top */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
-.sidebar h2 {
-  font-size: 1.8rem;
+.brand-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .sidebar-menu {
   list-style: none;
   padding: 0;
+  flex-grow: 1;
 }
 
 .sidebar-menu li {
-  padding: 12px;
-  text-align: center;
-  border-radius: 8px;
-  margin: 8px 0;
-  background-color: #1c3a5a;
-  color: white;
-  transition: all 0.3s ease-in-out;
+  padding: 15px 20px;
+  margin-bottom: 10px;
   cursor: pointer;
-}
-
-.sidebar-menu li:hover,
-.sidebar-menu li.active {
-  background-color: #1479bd;
-  transform: scale(1.05);
-}
-
-/* Main Content Area */
-.main-content {
-  margin-left: 0px; /*Push the content next to the sidebar */
-  padding: 20px;
-  margin-right: 250px;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  height: 100vh;
-  overflow-y: hidden;
-  width: calc(158% - 250px); /* Ensure it takes up full remaining width */
-}
-
-/* Header */
-.dashboard-header {
-  background-color: white;
-  padding: 20px;
-  border-radius: 12px;
+  border-radius: 8px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+  font-size: 16px;
 }
 
-/* Dashboard Content */
-.main-content h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.sidebar-menu li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.main-content .overview-section {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.main-content .overview-card {
-  flex: 1;
-  padding: 20px;
-  background: linear-gradient(135deg, #1d4ed8, #3b82f6);
-  border-radius: 12px;
-  color: white;
-  text-align: center;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.main-content .overview-card:hover {
-  transform: translateY(-5px);
-}
-
-/* Widgets Section */
-.widgets {
-  margin-top: 40px; /* Space between the main content and widgets */
+.sidebar-menu li.active {
   background-color: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #4facfe;
+  font-weight: bold;
 }
 
-/* Content Displayed on Service Click */
-.service-content {
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  display: none; /* Initially hidden */
+.menu-icon {
+  margin-right: 10px;
+  font-size: 18px;
 }
 
-/* Active Service */
-.service-content.active {
-  display: block; /* Display active service content */
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+  height: 100vh;
+  overflow-y: auto;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  body {
-    flex-direction: column; /* Stack sidebar and content vertically on mobile */
-  }
-
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative; /* Allow scrolling with content */
-  }
-
-  .main-content {
-    margin-left: 0;
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .widgets {
-    width: 100%;
-    margin-top: 20px;
-  }
-}
-/* Dashboard Content */
-.dashboard-content h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
+/* Dashboard Cards */
 .overview-section {
   display: flex;
-  justify-content: space-between;
   gap: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .overview-card {
   flex: 1;
+  min-width: 200px;
   padding: 20px;
-  background: linear-gradient(135deg, #1d4ed8, #3b82f6);
-  border-radius: 12px;
-  color: white;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
   text-align: center;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
 
-.dashboard-section h2 {
-  font-size: 1.6rem;
+.overview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.overview-card h4 {
   margin-bottom: 10px;
+  font-size: 18px;
+  color: #0078d7;
 }
 
-.dashboard-section ul {
-  list-style-type: none;
-  padding-left: 0;
+.overview-card p {
+  font-size: 16px;
+  color: #333;
 }
 
-.dashboard-section .placeholder-chart {
-  width: 100%;
-  height: 250px;
-  background-color: #e2e2e2;
-  border-radius: 8px;
+/* Sections */
+.dashboard-section h2 {
+  margin-top: 30px;
+  font-size: 22px;
+  color: #004e92;
+  margin-bottom: 15px;
 }
 
-/* Appointments Section */
-.appointments-content table {
+.placeholder-chart {
+  height: 200px;
+  background: #d9f1ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 16px;
+}
+
+/* Appointments Table */
+.appointments-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #2171b3;
-  color: white;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .appointments-table th,
 .appointments-table td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  color: #333;
 }
 
 .appointments-table th {
-  background-color: #0f66ad;
+  background-color: #f7faff;
+  color: #0078d7;
 }
 
 .btn {
-  padding: 6px 12px;
-  background-color: #1479bd;
-  color: white;
+  padding: 8px 16px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  background-color: #4facfe;
+  color: white;
   cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
 .btn:hover {
-  background-color: #0c6fa1;
+  background-color: #0078d7;
 }
 
-/* Doctors Section */
-.doctors-content {
-  margin-left:0px;
-  margin-right: 430px;
-  margin-top: 20px;
+/* Doctor Cards */
+.doctor-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .doctor-card {
-  background-color: #2e7fc2;
-  color: white;
-  width: 158%;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(245, 239, 239, 0.1);
-  margin-bottom: 20px;
+  width: 250px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  text-align: center;
 }
 
 .doctor-card h4 {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  color: #004e92;
 }
 
 .doctor-card p {
-  font-size: 1.2rem;
+  color: #666;
 }
 
-.doctor-card .btn {
-  padding: 8px 16px;
-  background-color: #063f6d;
-}
+/* Responsive */
+@media (max-width: 768px) {
+  .overview-section {
+    flex-direction: column;
+  }
 
-.doctor-card .btn:hover {
-  background-color: #2d799c;
-}
+  .doctor-list {
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* Billing Section */
-.billing-content{
-  margin-right: 230px;
-  
-}
-.billing-content table {
-  width: 138%;
-  border-collapse: collapse;
-  background-color: #2eace7;
-  color: white;
-}
+  .sidebar {
+    width: 180px;
+    padding: 15px;
+  }
 
-.billing-content th,
-.billing-content td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #000000;
-}
-
-.billing-content th {
-  background-color: #0f66ad;
-  color: white;
+  .main-content {
+    padding: 20px;
+  }
 }
