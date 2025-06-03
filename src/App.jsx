@@ -4,7 +4,7 @@ import SignUpSignIn from './Frontend/SignUpSignIn';
 import Home from './Frontend/Home';
 import Services from './Frontend/Services';
 import About from './About';
-import Contact from './Frontend/contact';
+import Contact from './Frontend/Contact';
 import Dashboard from './Frontend/pages/Dashboard';
 
 
