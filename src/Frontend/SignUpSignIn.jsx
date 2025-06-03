@@ -53,7 +53,7 @@ function SignUpSignIn() {
 
   const handleSignupSubmit = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/signup', signupData);
+      const res = await axios.post('http://localhost:5000/user/signup', signupData);
       alert(res.data.message);
       navigate('/services'); // or wherever you want
     } catch (err) {
@@ -64,7 +64,7 @@ function SignUpSignIn() {
 
   const handleLoginSubmit = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', loginData);
+      const res = await axios.post('http://localhost:5000/user/login', loginData);
       alert(res.data.message);
       localStorage.setItem('token', res.data.token); // store token if needed
       navigate('/services');
